@@ -18,5 +18,11 @@ export class HomePage {
   add() {
     this.navCtrl.push(AddPage);
   }
-  
+
+  del(id: number) {
+    this.desProv.delete(id);
+  }
+
+ 
+
 }

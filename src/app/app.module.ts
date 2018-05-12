@@ -9,6 +9,9 @@ import { HomePage } from '../pages/home/home';
 import { DespesaProvider } from '../providers/despesa/despesa';
 import { AddPage } from '../pages/add/add';
 
+/* LocalStorage */
+import { LocalStorageModule } from 'angular-2-local-storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,7 +21,12 @@ import { AddPage } from '../pages/add/add';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    LocalStorageModule.withConfig({
+      prefix: 'despesasApp',
+      storageType: 'localStorage'
+    })
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

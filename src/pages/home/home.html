@@ -14,7 +14,7 @@
     <h2>{{despesa.nome}}</h2>
     <p>{{despesa.valor}}</p>
     <ion-note item-right>{{despesa.data | date: 'dd/MM/yyyy'}}</ion-note>
-    <ion-icon name="trash" item-right></ion-icon>
+    <ion-icon (click)="del(despesa.id)" name="trash" item-right></ion-icon>
   </ion-item>
   <ion-fab right bottom>
     <button ion-fab color="primary" (click)="add()">
